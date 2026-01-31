@@ -9,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container
 builder.Services.AddScoped<ITenantContext, TenantContext>();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer("Server=.;Database=MultiTenantAppDb;Integrated Security=true;TrustServerCertificate=true;"));
+    options.UseSqlite("Data Source=multitenantapp.db"));
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
