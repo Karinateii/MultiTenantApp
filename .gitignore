@@ -75,3 +75,4 @@ coverage/
 # Build output
 publish/
 PublishProfiles/
+*.db
